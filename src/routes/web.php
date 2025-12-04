@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConfirmController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ThanksController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +23,5 @@ Route::get('/', [ContactController::class, 'index']);
 Route::get('/confirm', [ConfirmController::class, 'index']);
 Route::get('/thanks', [ThanksController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index']);

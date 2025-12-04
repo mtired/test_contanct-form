@@ -1,0 +1,158 @@
+body {
+    background: #ffffff;
+    font-family: "Georgia", serif;
+}
+
+/* タイトル */
+.admin-title {
+    text-align: center;
+    font-size: 28px;
+    color: #6f5c4f;
+    margin: 40px 0 30px;
+}
+
+/* テーブルと同じ幅で中央配置 */
+.search-area {
+    width: 85%;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* 横並びのグループ */
+.search-form {
+    width: 100%;
+}
+
+.search-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 入力欄とセレクトを自動伸縮させる */
+.search-input,
+.search-select {
+    flex: 1;
+    min-width: 120px;
+
+    padding: 10px 14px;
+    background: #f8f6f4;
+    border: 1px solid #dcd3c9;
+    border-radius: 4px;
+    color: #7b6a63;
+    font-size: 14px;
+}
+
+/* 先頭のテキスト入力だけ少し広めにしておく */
+.search-input {
+    flex: 2;
+}
+
+/* ボタンはサイズ固定、縮まない */
+.search-btn,
+.reset-btn {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.search-btn {
+    background: #7f6b5a;
+    color: white;
+    border: none;
+}
+
+.reset-btn {
+    background: #d8c9bc;
+    border: none;
+    color: #7c6a63;
+}
+
+/* エクスポート */
+.export-btn {
+    margin: 20px 0 20px;
+    background: #d8c9bc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* エクスポートボタンの枠 */
+.export-wrapper {
+    width: 85%;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+/* テーブル */
+.admin-table {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 15px;
+}
+
+.admin-table th {
+    background: #8a7768;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.admin-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* 詳細ボタン */
+.detail-btn {
+    padding: 6px 12px;
+    background: #ede8e4;
+    border: 1px solid #cec4bd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ページネーション位置 */
+.pagination-wrapper {
+    width: 85%;
+    margin: 0 auto 0px;
+    text-align: right;
+}
+
+/* ページネーション全体 */
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* 数字ボタン */
+.page,
+.page-nav {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid #d4c8bd;
+    background: #fff;
+    border-radius: 4px;
+    color: #7c6a5c;
+    cursor: pointer;
+    min-width: 28px;
+    text-align: center;
+}
+
+/* エクスポートボタンとページネーションの位置揃え */
+.table-header {
+    width: 85%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
