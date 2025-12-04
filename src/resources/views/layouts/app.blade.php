@@ -17,6 +17,9 @@
       <a class="header__logo">
         FashionablyLate
       </a>
+      <div class="header__buttons">
+        @stack('header-buttons')
+      </div>
     </div>
   </header>
   <main>
