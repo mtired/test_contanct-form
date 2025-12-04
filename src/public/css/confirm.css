@@ -1,0 +1,63 @@
+/* -----------------------------------
+   ページタイトル
+----------------------------------- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* -----------------------------------
+   テーブル
+----------------------------------- */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.confirm-table th,
+.confirm-table td {
+    border: 1px solid #ddd;
+    padding: 18px;
+    vertical-align: top;
+}
+
+.confirm-table th {
+    width: 250px;
+    background: #b7a89e;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* -----------------------------------
+   ボタン
+----------------------------------- */
+.button-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    width: 140px;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #b7a89e;
+    color: #fff;
+    margin: 0 20px;
+    border-radius: 4px;
+}
+
+.btn.back {
+    background: #ddd;
+    color: #6c5b4c;
+}
