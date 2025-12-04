@@ -1,0 +1,58 @@
+/* 全体 */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    font-family: "Georgia", serif;
+    color: #6c5b4c;
+}
+
+/* ラッパー全体 */
+.thankyou-wrapper {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+}
+
+/* 背景 "Thank you" */
+.bg-text {
+    position: absolute;
+    top: 50%; /* 画面中央 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 220px;
+    font-weight: 400;
+    color: rgba(200, 180, 160, 0.15);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1; /* 背景になるように */
+}
+
+/* メッセージ（背景の上に重ねる） */
+.message {
+    position: absolute;
+    top: 42%; /* 背景より少し上に */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    z-index: 2; /* 前面 */
+}
+
+/* HOME ボタン */
+.home-button {
+    position: absolute;
+    top: 52%; /* 背景より少し下に */
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background: #9d8c80;
+    color: #fff;
+    padding: 10px 35px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 3px;
+    z-index: 2;
+}
+.home-button:hover {
+    opacity: 0.8;
+}
