@@ -7,7 +7,13 @@
 @section('content')
 <main class="container">
   <h2 class="page-title">Confirm</h2>
-  <form action="/thanks" method="post">
+  <form action="/thanks" method="get">
+    @csrf
+    <!-- 入力内容を渡す -->
+    @foreach ($contact as $key => $value)
+    <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+    @endforeach
+
     <table class="confirm-table">
       <tr>
         <th>お名前</th>
@@ -35,7 +41,7 @@
       </tr>
       <tr>
         <th>住所</th>
-        <td>{{ $contact['address'] }}/td>
+        <td>{{ $contact['address'] }}</td>
       </tr>
       <tr>
         <th>建物名</th>

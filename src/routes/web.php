@@ -21,8 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::get('/confirm', [ConfirmController::class, 'index']);
-Route::get('/thanks', [ThanksController::class, 'index']);
+Route::get('/thanks', [ConfirmController::class, 'thanks']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/admin', [AdminController::class, 'index']);
