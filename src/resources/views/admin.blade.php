@@ -12,7 +12,6 @@
 @endpush
 
 @section('content')
-
 <div class="admin-container">
   <h2 class="admin-title">Admin</h2>
   <!-- 検索フォーム -->
@@ -42,17 +41,8 @@
   <!-- ⭐ 検索と同じ親の中にヘッダーを置く -->
   <div class="table-header">
     <button class="export-btn">エクスポート</button>
-
     <div class="pagination-wrapper">
-      <div class="pagination">
-        <span class="page-nav">&lt;</span>
-        <a class="page active">1</a>
-        <a class="page">2</a>
-        <a class="page">3</a>
-        <a class="page">4</a>
-        <a class="page">5</a>
-        <span class="page-nav">&gt;</span>
-      </div>
+      {{ $contacts->links() }}
     </div>
   </div>
 
@@ -68,15 +58,23 @@
       </tr>
     </thead>
     <tbody>
-      @for($i=0; $i<8; $i++)
-        <tr>
-        <td>山田　太郎</td>
-        <td>男性</td>
-        <td>test@example.com</td>
-        <td>商品の交換について</td>
+      @foreach($contacts as $contact)
+      <tr>
+        <td>{{ $contact->first_name }} {{ $contact->last_name }}</td>
+        <td>
+          @if($contact->gender == 1)
+          男性
+          @elseif($contact->gender == 2)
+          女性
+          @else
+          その他
+          @endif
+        </td>
+        <td>{{ $contact->email }}</td>
+        <td>{{ $contact->category->content }}</td>
         <td><button class="detail-btn">詳細</button></td>
-        </tr>
-        @endfor
+      </tr>
+      @endforeach
     </tbody>
   </table>
 </div>

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
+use Illuminate\Pagination\Paginator;
 
 class AdminController extends Controller
 {
     //
     public function index()
     {
-        return view('admin');
+        $contacts = Contact::paginate(7);
+        return view('admin', compact('contacts'));
     }
 }

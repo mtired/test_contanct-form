@@ -120,38 +120,67 @@ body {
     cursor: pointer;
 }
 
-/* ページネーション位置 */
+/* ページネーションの外枠 */
 .pagination-wrapper {
-    width: 85%;
-    margin: 0 auto 0px;
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-/* ページネーション全体 */
+/* Bootstrap 標準 ul.pagination をフレックスに */
 .pagination {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    display: flex;
+    gap: 0;
+    border: 1px solid #d4c8bd;
+    border-radius: 8px;
+    overflow: hidden; /* 枠からはみ出さないように */
 }
 
-/* 数字ボタン */
-.page,
-.page-nav {
-    display: inline-block;
-    padding: 6px 10px;
-    border: 1px solid #d4c8bd;
-    background: #fff;
-    border-radius: 4px;
-    color: #7c6a5c;
-    cursor: pointer;
-    min-width: 28px;
-    text-align: center;
+/* li.page-item の共通設定 */
+.page-item {
+    list-style: none;
+}
+
+/* リンク共通 */
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+
+    width: 40px;
+    height: 36px;
+
+    border: 0 !important;
+    border-right: 1px solid #d4c8bd !important;
+
+    color: #8a7768 !important;
+    background: #fff !important;
+
+    font-size: 16px;
+}
+
+/* 最後の区切り線を消す */
+.page-item:last-child .page-link {
+    border-right: 0 !important;
+}
+
+/* アクティブページ */
+.page-item.active .page-link {
+    background: #8a7768 !important;
+    color: #fff !important;
+}
+
+/* 非アクティブ（← →）の薄い色 */
+.page-item.disabled .page-link {
+    background: #f8f4f0 !important;
+    opacity: 0.5;
 }
 
 /* エクスポートボタンとページネーションの位置揃え */
 .table-header {
     width: 85%;
-    margin: 0 auto 10px;
+    margin: 15px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
