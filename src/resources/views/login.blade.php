@@ -15,11 +15,11 @@
     <div class="login-wrapper">
       <h2 class="login-title">Login</h2>
       <div class="login-card">
-        <form method="POST" action="/login">
+        <form action="/login" method="post">
           @csrf
           <div class="form-group">
             <label for="email">メールアドレス</label>
-            <input id="email" type="email" name="email" placeholder="例: test@example.com">
+            <input id="email" type="email" name="email" placeholder="例: test@example.com" value="{{ old('email') }}">
           </div>
           <div class="form-group">
             <label for="password">パスワード</label>
