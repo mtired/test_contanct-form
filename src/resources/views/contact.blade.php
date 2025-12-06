@@ -73,9 +73,9 @@
       <!-- お問い合わせ種類 -->
       <div class="form-row">
         <label>お問い合わせの種類 <span class="required">※</span></label>
-        <select>
+        <select name="category_id">
           @foreach($categories as $category)
-          <option value="{{ $category->id }}"
+          <option value=" {{ $category->id }}"
             {{ old('category_id') == $category->id ? 'selected' : '' }}>
             {{ $category->content }}
           </option>

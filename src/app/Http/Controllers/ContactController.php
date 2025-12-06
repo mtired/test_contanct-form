@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -33,6 +32,8 @@ class ContactController extends Controller
         // 電話番号を結合
         $contact['tel'] = $request->tel1 . $request->tel2 . $request->tel3;
 
-        return view('confirm', compact('contact'));
+        $category = Category::find($request->category_id);
+
+        return view('confirm', compact('contact', 'category'));
     }
 }
