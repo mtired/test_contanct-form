@@ -15,25 +15,16 @@ use Laravel\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
+    public function boot()
     {
-        //
-    }
+        Fortify::createUsersUsing(CreateNewUser::class);
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
         Fortify::registerView(function () {
-            return view('auth.register');
+            return view('register');
         });
 
         Fortify::loginView(function () {
-            return view('auth.login');
+            return view('login');
         });
 
         RateLimiter::for('login', function (Request $request) {

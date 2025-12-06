@@ -15,7 +15,7 @@
     <div class="login-wrapper">
       <h2 class="login-title">Login</h2>
       <div class="login-card">
-        <form action="/admin" method="post">
+        <form action="/login" method="post">
           @csrf
           <div class="form-group">
             <label for="email">メールアドレス</label>

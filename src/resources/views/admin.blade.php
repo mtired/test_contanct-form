@@ -5,7 +5,10 @@
 @endsection
 
 @push('header-buttons')
-<a href="/logout" class="header-link">logout</a>
+<form action="/logout" method="post">
+  @csrf
+  <button class="header-link">logout</button>
+</form>
 @endpush
 
 @section('content')
