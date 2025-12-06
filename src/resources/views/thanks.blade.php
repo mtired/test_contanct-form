@@ -6,11 +6,9 @@
 
 @section('content')
 
-<body>
-  <div class="thankyou-wrapper">
-    <div class="bg-text">Thank you</div>
-    <p class="message">お問い合わせありがとうございました</p>
-    <a href="/" class="home-button">HOME</a>
-  </div>
-</body>
+<div class="thankyou-wrapper">
+  <div class="bg-text">Thank you</div>
+  <p class="message">お問い合わせありがとうございました</p>
+  <a href="/" class="home-button">HOME</a>
+</div>
 @endsection
