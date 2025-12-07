@@ -1,0 +1,274 @@
+/* ===============================
+   共通
+================================*/
+body {
+    background: #ffffff;
+    font-family: "Georgia", serif;
+}
+
+/* ===============================
+   タイトル
+================================*/
+.admin-title {
+    text-align: center;
+    font-size: 28px;
+    color: #6f5c4f;
+    margin: 40px 0 30px;
+}
+
+/* ===============================
+   検索エリア
+================================*/
+.search-area {
+    width: 85%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 入力欄とセレクト */
+.search-input,
+.search-select {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 14px;
+    background: #f8f6f4;
+    border: 1px solid #dcd3c9;
+    border-radius: 4px;
+    color: #7b6a63;
+    font-size: 14px;
+}
+
+/* 名前検索欄だけ広く */
+.search-input {
+    flex: 2;
+}
+
+/* ボタン */
+.search-btn,
+.reset-btn {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.search-btn {
+    background: #7f6b5a;
+    color: white;
+    border: none;
+}
+
+.reset-btn {
+    background: #d8c9bc;
+    border: none;
+    color: #7c6a63;
+}
+
+/* ===============================
+   エクスポート
+================================*/
+.export-btn {
+    margin: 20px 0 20px;
+    background: #d8c9bc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+.table-header {
+    width: 85%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===============================
+   テーブル
+================================*/
+.admin-table {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 15px;
+}
+
+.admin-table th {
+    background: #8a7768;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* 詳細ボタン */
+.detail-btn {
+    padding: 6px 12px;
+    background: #ede8e4;
+    border: 1px solid #cec4bd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ===============================
+   ページネーション
+================================*/
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 0;
+    border: 1px solid #d4c8bd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.page-item {
+    list-style: none;
+}
+
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 36px;
+    text-decoration: none !important;
+    border-right: 1px solid #d4c8bd !important;
+    color: #8a7768 !important;
+    background: #fff !important;
+    font-size: 16px;
+}
+
+.page-item:last-child .page-link {
+    border-right: none !important;
+}
+
+.page-item.active .page-link {
+    background: #8a7768 !important;
+    color: #fff !important;
+}
+
+.page-item.disabled .page-link {
+    background: #f8f4f0 !important;
+    opacity: 0.5;
+}
+
+/* Livewire ページネーション非表示 */
+nav[role="navigation"] {
+    display: none !important;
+}
+
+/* モーダル背景 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* モーダル本体 */
+/* モーダル全体の余白も広げる */
+.modal-card {
+    background: #fff;
+    width: 680px; /* ← 少し幅を広げる */
+    padding: 60px 70px; /* ← 内側の余白も広げる */
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    color: #4b3d36;
+    font-size: 17px; /* ← 全体文字を少し大きく */
+}
+
+/* 閉じるボタン（右上の丸） */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #b7a599;
+    background: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7a5f4a;
+    cursor: pointer;
+}
+
+/* テーブルレイアウト */
+.modal-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 26px; /* ← 行間を広げる（重要） */
+}
+
+.modal-table th {
+    width: 160px;
+    text-align: left;
+    color: #6b564b;
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px; /* ← 項目名の横の余白 */
+    vertical-align: top;
+}
+
+.modal-table td {
+    font-size: 16px;
+    color: #4b3d36;
+    line-height: 1.8; /* ← 行の高さをやわらかくする */
+    vertical-align: top;
+}
+
+/* 内容が複数行のとき */
+.modal-multiline {
+    white-space: pre-wrap;
+    line-height: 1.9;
+}
+
+/* 削除ボタン */
+.modal-footer {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.modal-delete-btn {
+    padding: 12px 40px;
+    background-color: #b85c3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}

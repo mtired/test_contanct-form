@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ConfirmController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ThanksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [ContactController::class, 'index']);
+Route::post('/', [ContactController::class, 'index']);
+Route::post('/confirm', [ContactController::class, 'confirm']);
+Route::get('/thanks', [ConfirmController::class, 'thanks']);
+Route::middleware('auth')->group(function () {
+  Route::get('/admin', [AdminController::class, 'index']);
 });
