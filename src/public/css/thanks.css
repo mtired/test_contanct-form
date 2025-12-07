@@ -7,7 +7,6 @@ body {
     color: #6c5b4c;
 }
 
-/* ラッパー全体 */
 .thankyou-wrapper {
     position: relative;
     height: 100vh;
@@ -17,7 +16,7 @@ body {
 /* 背景 "Thank you" */
 .bg-text {
     position: absolute;
-    top: 50%; /* 画面中央 */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 220px;
@@ -25,23 +24,22 @@ body {
     color: rgba(200, 180, 160, 0.15);
     pointer-events: none;
     white-space: nowrap;
-    z-index: 1; /* 背景になるように */
+    z-index: 1;
 }
 
-/* メッセージ（背景の上に重ねる） */
 .message {
     position: absolute;
-    top: 42%; /* 背景より少し上に */
+    top: 42%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
-    z-index: 2; /* 前面 */
+    z-index: 2;
 }
 
 /* HOME ボタン */
 .home-button {
     position: absolute;
-    top: 52%; /* 背景より少し下に */
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;

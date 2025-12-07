@@ -64,7 +64,7 @@ body {
     opacity: 0.85;
 }
 
-/* エラーメッセージ（追加） */
+/* エラーメッセージ */
 .error-message {
     color: red;
     font-size: 14px;
