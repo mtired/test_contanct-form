@@ -41,4 +41,4 @@ php：8.1
 Composer：2.9.2
 
 ## ER図
-![ER図](./public/images/ER図.png)
+![ER図](./src/public/images/ER図.png)
