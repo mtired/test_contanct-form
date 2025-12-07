@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory as Faker;
 use App\Models\Category;
 
 class ContactFactory extends Factory
@@ -15,6 +16,8 @@ class ContactFactory extends Factory
 
     public function definition()
     {
+        $faker = Faker::create('ja_JP');
+
         return [
             'category_id' => Category::inRandomOrder()->first()->id,  // ★外部キー
             'first_name' => $this->faker->firstName,
