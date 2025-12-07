@@ -7,8 +7,6 @@
 @section('content')
 <main class="container">
   <h2 class="page-title">Confirm</h2>
-
-  {{-- ★ 内容表示用テーブルはそのまま --}}
   <table class="confirm-table">
     <tr>
       <th>お名前</th>

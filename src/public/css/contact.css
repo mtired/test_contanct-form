@@ -98,35 +98,25 @@ textarea {
 }
 
 /* -----------------------------------
-   ボタン（送信・修正）横並び
+   ボタン
 ----------------------------------- */
-.button-row {
+.button-area {
     display: flex;
-    justify-content: center; /* 中央揃え */
-    align-items: center;
-    gap: 30px; /* ボタンの間隔 */
-    margin-top: 40px;
+    justify-content: center;
+    gap: 20px; /* ボタン間のスペース */
+    margin-top: 20px;
 }
 
-/* 2つのフォームを横並びの箱として扱う */
-.button-row form {
-    margin: 0;
-}
-
-/* ボタン共通スタイル */
-.btn {
-    width: 140px;
-    padding: 10px 0;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    background: #b7a89e;
+button {
+    background: #6c5b4c;
     color: #fff;
+    border: none;
+    padding: 14px 60px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* 修正ボタン */
-.btn.back {
-    background: #ddd;
-    color: #6c5b4c;
+button:hover {
+    opacity: 0.85;
 }
