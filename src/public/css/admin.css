@@ -1,9 +1,14 @@
+/* ===============================
+   共通
+================================*/
 body {
     background: #ffffff;
     font-family: "Georgia", serif;
 }
 
-/* タイトル */
+/* ===============================
+   タイトル
+================================*/
 .admin-title {
     text-align: center;
     font-size: 28px;
@@ -11,16 +16,16 @@ body {
     margin: 40px 0 30px;
 }
 
-/* テーブルと同じ幅で中央配置 */
+/* ===============================
+   検索エリア
+================================*/
 .search-area {
     width: 85%;
     margin: 0 auto 20px;
-
     display: flex;
     justify-content: center;
 }
 
-/* 横並びのグループ */
 .search-form {
     width: 100%;
 }
@@ -32,12 +37,11 @@ body {
     gap: 12px;
 }
 
-/* 入力欄とセレクトを自動伸縮させる */
+/* 入力欄とセレクト */
 .search-input,
 .search-select {
     flex: 1;
     min-width: 120px;
-
     padding: 10px 14px;
     background: #f8f6f4;
     border: 1px solid #dcd3c9;
@@ -46,12 +50,12 @@ body {
     font-size: 14px;
 }
 
-/* 先頭のテキスト入力だけ少し広めにしておく */
+/* 名前検索欄だけ広く */
 .search-input {
     flex: 2;
 }
 
-/* ボタンはサイズ固定、縮まない */
+/* ボタン */
 .search-btn,
 .reset-btn {
     flex-shrink: 0;
@@ -73,7 +77,9 @@ body {
     color: #7c6a63;
 }
 
-/* エクスポート */
+/* ===============================
+   エクスポート
+================================*/
 .export-btn {
     margin: 20px 0 20px;
     background: #d8c9bc;
@@ -82,14 +88,17 @@ body {
     border-radius: 4px;
 }
 
-/* エクスポートボタンの枠 */
-.export-wrapper {
+.table-header {
     width: 85%;
-    margin: 0 auto 20px;
-    text-align: left;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* テーブル */
+/* ===============================
+   テーブル
+================================*/
 .admin-table {
     width: 85%;
     margin: 0 auto;
@@ -103,7 +112,6 @@ body {
     color: #fff;
     padding: 12px;
     text-align: left;
-    font-weight: normal;
 }
 
 .admin-table td {
@@ -120,68 +128,147 @@ body {
     cursor: pointer;
 }
 
-/* ページネーションの外枠 */
+/* ===============================
+   ページネーション
+================================*/
 .pagination-wrapper {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-/* Bootstrap 標準 ul.pagination をフレックスに */
 .pagination {
     display: flex;
     gap: 0;
     border: 1px solid #d4c8bd;
     border-radius: 8px;
-    overflow: hidden; /* 枠からはみ出さないように */
+    overflow: hidden;
 }
 
-/* li.page-item の共通設定 */
 .page-item {
     list-style: none;
 }
 
-/* リンク共通 */
 .page-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none !important;
-
     width: 40px;
     height: 36px;
-
-    border: 0 !important;
+    text-decoration: none !important;
     border-right: 1px solid #d4c8bd !important;
-
     color: #8a7768 !important;
     background: #fff !important;
-
     font-size: 16px;
 }
 
-/* 最後の区切り線を消す */
 .page-item:last-child .page-link {
-    border-right: 0 !important;
+    border-right: none !important;
 }
 
-/* アクティブページ */
 .page-item.active .page-link {
     background: #8a7768 !important;
     color: #fff !important;
 }
 
-/* 非アクティブ（← →）の薄い色 */
 .page-item.disabled .page-link {
     background: #f8f4f0 !important;
     opacity: 0.5;
 }
 
-/* エクスポートボタンとページネーションの位置揃え */
-.table-header {
-    width: 85%;
-    margin: 15px auto;
+/* Livewire ページネーション非表示 */
+nav[role="navigation"] {
+    display: none !important;
+}
+
+/* モーダル背景 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    z-index: 999;
+}
+
+/* モーダル本体 */
+/* モーダル全体の余白も広げる */
+.modal-card {
+    background: #fff;
+    width: 680px; /* ← 少し幅を広げる */
+    padding: 60px 70px; /* ← 内側の余白も広げる */
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    color: #4b3d36;
+    font-size: 17px; /* ← 全体文字を少し大きく */
+}
+
+/* 閉じるボタン（右上の丸） */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #b7a599;
+    background: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7a5f4a;
+    cursor: pointer;
+}
+
+/* テーブルレイアウト */
+.modal-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 26px; /* ← 行間を広げる（重要） */
+}
+
+.modal-table th {
+    width: 160px;
+    text-align: left;
+    color: #6b564b;
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px; /* ← 項目名の横の余白 */
+    vertical-align: top;
+}
+
+.modal-table td {
+    font-size: 16px;
+    color: #4b3d36;
+    line-height: 1.8; /* ← 行の高さをやわらかくする */
+    vertical-align: top;
+}
+
+/* 内容が複数行のとき */
+.modal-multiline {
+    white-space: pre-wrap;
+    line-height: 1.9;
+}
+
+/* 削除ボタン */
+.modal-footer {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.modal-delete-btn {
+    padding: 12px 40px;
+    background-color: #b85c3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
 }
