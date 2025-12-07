@@ -196,19 +196,18 @@ nav[role="navigation"] {
 }
 
 /* モーダル本体 */
-/* モーダル全体の余白も広げる */
 .modal-card {
     background: #fff;
-    width: 680px; /* ← 少し幅を広げる */
-    padding: 60px 70px; /* ← 内側の余白も広げる */
-    border-radius: 6px;
+    width: 680px;
+    padding: 60px 70px;
+    /border-radius: 6px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     color: #4b3d36;
-    font-size: 17px; /* ← 全体文字を少し大きく */
+    font-size: 17px;
 }
 
 /* 閉じるボタン（右上の丸） */
@@ -231,7 +230,7 @@ nav[role="navigation"] {
 .modal-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 26px; /* ← 行間を広げる（重要） */
+    border-spacing: 0 26px;
 }
 
 .modal-table th {
@@ -240,14 +239,14 @@ nav[role="navigation"] {
     color: #6b564b;
     font-weight: bold;
     font-size: 16px;
-    padding-right: 20px; /* ← 項目名の横の余白 */
+    padding-right: 20px;
     vertical-align: top;
 }
 
 .modal-table td {
     font-size: 16px;
     color: #4b3d36;
-    line-height: 1.8; /* ← 行の高さをやわらかくする */
+    line-height: 1.8;
     vertical-align: top;
 }
 
