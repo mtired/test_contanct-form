@@ -30,11 +30,15 @@ phpMyAdmin：
 http://localhost:8080/
 
 ## 使用技術(実行環境)
-Laravel:8.83.29
-mysql:8.0.26
-nginx:1.21.1
-php:8.1
-Composer:2.9.2
+Laravel：8.83.29
+
+mysql：8.0.26
+
+nginx：1.21.1
+
+php：8.1
+
+Composer：2.9.2
 
 ## ER図
 ![ER図](./public/images/er.png)
