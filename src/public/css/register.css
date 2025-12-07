@@ -83,3 +83,9 @@ body {
 .submit-btn:hover {
     opacity: 0.85;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}

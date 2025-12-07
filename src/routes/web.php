@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ContactController::class, 'index']);
+Route::post('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::get('/thanks', [ConfirmController::class, 'thanks']);
 Route::middleware('auth')->group(function () {

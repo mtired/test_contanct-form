@@ -63,3 +63,10 @@ body {
 .login-btn:hover {
     opacity: 0.85;
 }
+
+/* エラーメッセージ（追加） */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 6px;
+}
